@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const user_routes = require("./routes/user_routes");
 const operation_routes = require("./routes/operation_routes");
 const category_routes = require("./routes/category_routes");
-const OperationCategory_routes = require("./routes/OperationCategory_routes");
+
 
 
 //CORS
@@ -29,7 +29,6 @@ app.use((req, res, next) => {
 app.use('/api',user_routes);
 app.use('/api',operation_routes);
 app.use('/api',category_routes);
-app.use('/api',OperationCategory_routes);
 
 
 //Exportacion

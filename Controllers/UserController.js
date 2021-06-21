@@ -18,7 +18,8 @@ var UserController ={
                 const token = jwt.sign(user.dataValues.id, "user_key");
                 response.status(200).send({
                     token: token,
-                    msg: "User created succesfully!"
+                    msg: "User created succesfully!",
+                    user:user
                 });
             }).catch((error) => {
                 handleFatalError(error);
@@ -39,7 +40,8 @@ var UserController ={
                 const token = jwt.sign(user.id,"user_key");
                 response.status(200).send({
                     token: token,
-                    msg: "Authentication exitosa!"
+                    msg: "Authentication exitosa!",
+                    user:user
                 });
             }
         }); 
